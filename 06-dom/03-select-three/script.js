@@ -11,6 +11,16 @@
 
 (function() {
 
+	
     // your code here
+
+	var mesTarget = document.getElementsByClassName("target");
+	var nbrTarget = mesTarget.length;
+	
+
+	for(i=0;i<nbrTarget;i++){
+		mesTarget[i].innerHTML = "owned";
+	}
+
 
 })();

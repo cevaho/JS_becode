@@ -20,5 +20,29 @@
     ];
 
     // your code here
+	
+	//not to show the same image after the first click, reverse the case order of the first array:
+	var newGallery = gallery.reverse();
+	var monImage = document.querySelector(".material figure img");
+	var nbrRef=0;
+
+	function changeImage(){
+		
+		maSource=newGallery[nbrRef];
+		monImage.setAttribute("src",maSource);
+		nbrRef++;
+
+		if (nbrRef > 4){
+				nbrRef=0;
+				}
+
+	};
+		
+	document.getElementById("next").addEventListener("click", function() {
+
+			changeImage();
+				
+				
+	});
 
 })();

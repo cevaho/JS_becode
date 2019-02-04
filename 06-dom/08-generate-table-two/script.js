@@ -12,5 +12,23 @@
 (function() {
 
     // your code here
+	var maTarget = document.querySelector("#target");
+
+	var monTableau = document.createElement("table");
+	    monTableau.id="rower";
+		
+	maTarget.insertAdjacentElement("beforeend",monTableau);
+
+	for(i=1;i<11;i++){
+		var maColonne = document.createElement("tr");
+		monTableau.insertAdjacentElement("beforeend",maColonne);
+		for(j=1;j<11;j++){
+			var maRangee = document.createElement("td");
+			maColonne.insertAdjacentElement("beforeend",maRangee);
+			maRangee.innerHTML=i*j;
+		}
+			
+	}
+
 
 })();

@@ -12,5 +12,21 @@
 (function() {
 
     // your code here
+	document.getElementsByClassName("target")[0].innerHTML = "owned";
+
+
+function ajoutMessage(message){
+            //var contentAdd = document.getElementsByClassName("material");
+            var contentAdd = document.querySelector('.material');
+            var tempDiv = document.createElement('div');
+            tempDiv.setAttribute("id", "message");
+            tempDiv.innerHTML = message;
+            if (contentAdd) {
+                contentAdd.insertAdjacentElement('beforeend',tempDiv);
+            }
+
+            var messager = document.getElementById("message");
+            messager.style.fontSize = "1.5em";
+        };
 
 })();

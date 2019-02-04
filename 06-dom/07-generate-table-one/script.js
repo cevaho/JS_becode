@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
+    	// your code here
+	var maTarget = document.querySelector("#target");
+
+	var monTableau = document.createElement("table");
+	    monTableau.id="rower";
+		
+	maTarget.insertAdjacentElement("beforeend",monTableau);
+
+	for(i=0;i<10;i++){
+		var maColonne = document.createElement("tr");
+		monTableau.insertAdjacentElement("beforeend",maColonne);
+		var maRangée = document.createElement("td");
+		maColonne.insertAdjacentElement("beforeend",maRangée);	
+	}
+
 
 })();

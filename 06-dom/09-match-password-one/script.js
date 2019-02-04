@@ -11,6 +11,46 @@
 
 (function() {
 
-    // your code here
+        // your code here
+
+	function myValorA(){
+			   var inputa = document.getElementById("pass-one").value;
+				return inputa;
+			   }
+
+	function myValorB(){
+			   var inputb = document.getElementById("pass-two").value;
+				return inputb;
+			   }
+
+	function validation(wronger){
+				var inputer = document.querySelectorAll("input");
+
+				for (const inputo of inputer) {
+					console.log("ok inputo");
+					if(wronger===1){
+						inputo.setAttribute("style","border:2px solid red;");
+						}
+  					else{
+						inputo.setAttribute("style","border:2px solid green;");
+						}
+				}
+			   }
+
+
+	document.getElementById("run").addEventListener("click", function() {
+
+			var password = myValorA();
+			var confirmPassword = myValorB();
+
+			if(password!=confirmPassword){
+							wronger=1;
+							validation(wronger);
+						    }
+			else{
+				wronger=0;
+				validation(wronger);
+				}
+	});
 
 })();

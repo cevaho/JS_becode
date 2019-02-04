@@ -13,4 +13,21 @@
 
     // your code here
 
+
+	var maSource = document.getElementById("source");		
+  	var monAttribut = maSource.getAttribute("data-image");
+
+	var maTarget = document.getElementById("target");
+	var monImg = document.createElement("img");
+		monImg.setAttribute("src", monAttribut);
+	
+
+	maTarget.insertAdjacentElement("beforeend",monImg);
+
+	function removeElement(maSource) {
+    		return maSource.parentNode.removeChild(maSource);
+	}
+
+	removeElement(maSource);
+
 })();
