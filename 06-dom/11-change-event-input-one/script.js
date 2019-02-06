@@ -11,6 +11,24 @@
 
 (function() {
 
-    // your code here
+    	// your code here
+
+	function myValorA(){	
+			var inputVal = document.getElementById("pass-one").value;
+			return inputVal;
+	}
+
+	document.getElementById("pass-one").addEventListener("keyup", function() {
+			myValorA();
+			var nbrCaractere = myValorA().length;console.log(nbrCaractere);
+			var displayCount = document.getElementById("counter");console.log(displayCount);
+				//para.appendChild(document.createTextNode('Hello, '));
+			    displayCount.innerHTML= nbrCaractere +" / 10"
+
+			if(nbrCaractere>=10){
+				document.getElementById("pass-one").setAttribute("maxlength","10");
+				}
+			
+	});
 
 })();
