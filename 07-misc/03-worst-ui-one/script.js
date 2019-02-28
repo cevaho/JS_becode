@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    // récupérer et afficher la valeur du range dans #target 
+    // au onInput (pour avoir le résultat directement) de l'input type=range
+	var ranger = document.querySelector("#slider");
+	var targeter = document.querySelector("#target");
+
+	ranger.addEventListener('input', function(){
+			console.log(ranger.value);
+			targeter.innerHTML = ranger.value;
+	});
 
 })();
